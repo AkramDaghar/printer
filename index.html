@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Printer</title>
+	<link rel="icon" href="file.png" type="image/png">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://kit.fontawesome.com/0d38171885.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<div class="header">
+		<p class="header__title">Printer</p>
+	</div>
+
+	<div class="container">
+		<div class="container__text-part">
+			<div class="container__title">Upload your files here</div>
+			<div class="container__description">Your files must be in the following formats: <i>.pdf, .doc, .docx</i></div>
+
+			<form action="">
+				<label for="file-upload" class="file-label">Choose a file<i class="fas fa-link"></i></label>
+				<input type="file" accept=".pdf, .doc, .docx" id="file-upload">
+				<div id="file-upload-filename"></div>
+				<input type="submit" value="Print" class="print-btn">
+			</form>
+		</div>
+	</div>
+	<img src="undraw_photocopy.svg" alt="print" class="print-img">
+	<script>
+		var input = document.getElementById( 'file-upload' );
+var infoArea = document.getElementById( 'file-upload-filename' );
+
+input.addEventListener( 'change', showFileName );
+
+function showFileName( event ) {
+  var input = event.srcElement;
+  var fileName = input.files[0].name;
+  infoArea.textContent = 'File name: ' + fileName;
+}
+	</script>
+</body>
+</html>
