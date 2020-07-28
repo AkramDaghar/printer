@@ -5,13 +5,14 @@
 	<title>Printer</title>
 	<link rel="icon" href="file.png" type="image/png">
 	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
 	<script src="https://kit.fontawesome.com/0d38171885.js" crossorigin="anonymous"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 </head>
 <body>
 	<div class="header">
 		<p class="header__title">Printer</p>
+		<i class="fas fa-moon" onclick="darkMode()"></i>
 	</div>
 
 	<div class="container">
@@ -30,15 +31,20 @@
 	<img src="undraw_photocopy.svg" alt="print" class="print-img">
 	<script>
 		var input = document.getElementById( 'file-upload' );
-var infoArea = document.getElementById( 'file-upload-filename' );
+		var infoArea = document.getElementById( 'file-upload-filename' );
 
-input.addEventListener( 'change', showFileName );
+		input.addEventListener( 'change', showFileName );
 
-function showFileName( event ) {
-  var input = event.srcElement;
-  var fileName = input.files[0].name;
-  infoArea.textContent = 'File name: ' + fileName;
-}
+		function showFileName( event ) {
+  			var input = event.srcElement;
+  			var fileName = input.files[0].name;
+  			infoArea.textContent = 'File name: ' + fileName;
+		}
+
+		function darkMode() {
+   			var element = document.body;
+   			element.classList.toggle("dark-mode");
+		}
 	</script>
 </body>
 </html>
