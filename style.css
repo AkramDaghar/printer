@@ -37,6 +37,7 @@ body {
 	background-color: #fff;
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 }
 
 .header__title {
@@ -46,6 +47,13 @@ body {
 	padding-left: 50px;
 }
 
+
+.fa-moon {
+	font-size: 2em;
+	color: var(--blue);
+	margin-right: 40px;
+	cursor: pointer;
+}
 /* main content */
 
 .container {
@@ -123,21 +131,21 @@ input[type=file] {
 	color: #fff;
 }
 
+/* dark mode */
 
+.dark-mode {
+	background-color: #222;
+	color: #fff;
+}
 
+.dark-mode .header {
+	background: #222;
+}
 
+.dark-mode .file-label {
+	border-color: #fff;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.dark-mode .file-label:hover {
+	border-color: var(--blue);
+}
